@@ -1,15 +1,20 @@
+from dotenv import load_dotenv
+load_dotenv()
 import discord
 from discord.ext import commands
 from datetime import datetime
 import os
-from dotenv import load_dotenv
 
 # ===============================
 # CONFIGURAÇÕES
 # ===============================
 
 
-load_dotenv()
+
+TOKEN = os.getenv("SEU_TOKEN")
+LOG_CHANNEL_ID = 1449271957026504877
+MOD_ROLE_ID = 561438076367273994
+PREFIX = "!"
 TOKEN = os.getenv("DISCORD_TOKEN")
 LOG_CHANNEL_ID = 1449271957026504877
 MOD_ROLE_ID = 561438076367273994

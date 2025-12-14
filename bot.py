@@ -1,17 +1,22 @@
+import os
 from dotenv import load_dotenv
+
 load_dotenv()
+
+TOKEN = os.getenv("SEU_TOKEN")
+
+if not TOKEN:
+    raise RuntimeError("TOKEN não encontrado. Verifique a variável de ambiente SEU_TOKEN.")
+
 import discord
 from discord.ext import commands
 from datetime import datetime
-import os
 
 # ===============================
 # CONFIGURAÇÕES
 # ===============================
 
 
-
-TOKEN = os.getenv("SEU_TOKEN")
 LOG_CHANNEL_ID = 1449271957026504877
 MOD_ROLE_ID = 561438076367273994
 PREFIX = "!"
